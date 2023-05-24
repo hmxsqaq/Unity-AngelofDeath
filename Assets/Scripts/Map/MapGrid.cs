@@ -4,6 +4,31 @@ namespace Map
 {
     public class MapGrid : MonoBehaviour
     {
+        private int _x=-1, _y=-1;
+
+        public int X
+        {
+            get => _x;
+            set
+            {
+                if (_x == -1)
+                {
+                    _x = value;
+                }
+            }
+        }
+        public int Y
+        {
+            get => _y;
+            set
+            {
+                if (_y == -1)
+                {
+                    _y = value;
+                }
+            }
+        }
+
         private ICanBePutOnMap _bePutItem;
         private SpriteRenderer TheSpriteRenderer => GetComponent<SpriteRenderer>();
         

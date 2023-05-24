@@ -25,6 +25,8 @@ namespace Map
                 {
                     var newGrid = Instantiate(grid,transform);
                     _mapData[i, j] = newGrid;
+                    newGrid.X = i;
+                    newGrid.Y = j;
                     newGrid.transform.position = new Vector3(i * GridLenght, j * GridLenght);
                 }
             }        
